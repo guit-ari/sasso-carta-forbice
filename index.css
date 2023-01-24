@@ -1,0 +1,228 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.area {
+  background: #000000fd;
+  background: -webkit-linear-gradient(to left, #8f94fb, #41459b);
+  width: 100%;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  bottom: 0;
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none; /*essendo in posizione absolute i bottoni non me li faceva cliccare altrimenti*/
+}
+
+.circles li {
+  position: absolute;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(64, 7, 236, 0.415);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+  pointer-events: none;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+.login-bar {
+  padding: 30px;
+}
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+#title {
+  text-align: center;
+  font-size: 50px;
+  color: rgb(253, 253, 253);
+  text-shadow: 8px 0px 4px #3d3d3d;
+}
+#sasso,
+#carta,
+#forbice {
+  padding: 0;
+  border: 0;
+  margin: 10px;
+  transition: transform 0.2s;
+}
+#sasso:hover,
+#carta:hover,
+#forbice:hover {
+  background-color: rgb(3, 3, 3);
+  color: white;
+  animation: shake 0.3s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+.content-game {
+  text-align: center;
+  padding-top: 50px;
+}
+img {
+  height: 180px;
+  margin: 10px;
+}
+#computer {
+  text-align: center;
+  padding-top: 10px;
+}
+#result {
+  color: rgb(254, 254, 254);
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+#user {
+  font-size: 25px;
+  color: white;
+}
+#loginBtn {
+  font-size: 14px;
+  background-color: rgba(77, 6, 191, 0.845);
+  color: white;
+  border-radius: 4px;
+  width: 80px;
+  cursor: pointer;
+}
+#loginBtn:hover {
+  background-color: black;
+}
+@media only screen and (min-device-width: 300px) and (max-device-width: 812px) and (max-width: 1500px) {
+  .area {
+    padding-top: 40px;
+  }
+  img {
+    height: 60px;
+  }
+  #title {
+    font-size: 20px;
+  }
+}
